@@ -1,4 +1,4 @@
-package net.kikkirej.alexandria.analyzer.npmanalyzer
+package net.kikkirej.alexandria.analyzer.npm
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
