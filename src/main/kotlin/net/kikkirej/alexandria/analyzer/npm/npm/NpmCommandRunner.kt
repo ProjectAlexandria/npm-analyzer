@@ -22,7 +22,7 @@ class NpmCommandRunner {
 
         val reader = BufferedReader(InputStreamReader(process.inputStream))
         val builder = StringBuilder()
-        var line = ""
+        var line: String? = ""
         while (reader.readLine().also { line = it } != null) {
             builder.append(line)
             builder.append(System.getProperty("line.separator"))

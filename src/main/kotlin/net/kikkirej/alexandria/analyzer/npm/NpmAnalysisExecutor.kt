@@ -25,7 +25,7 @@ class NpmAnalysisExecutor(@Autowired val generalProperties: GeneralProperties,
             val businessKey = externalTask.businessKey
             val projectPath = projectPathOf(npmProjectPath, businessKey)
             log.info("Analyzing Project ${projectPath.absolutePath}")
-            //todo
+
             npmLogic.handleProjectIn(projectPath, npmProjectPath, businessKey.toLong())
 
             externalTaskService!!.complete(externalTask)

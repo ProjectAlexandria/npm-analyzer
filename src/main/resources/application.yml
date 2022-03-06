@@ -7,10 +7,6 @@ spring:
     config:
       enabled: "false"
 
-camunda.bpm.client:
-  max-tasks: 1
-  lock-duration: 600000
-
 ---
 spring:
   cloud:

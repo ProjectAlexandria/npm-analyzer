@@ -7,20 +7,20 @@ import org.springframework.stereotype.Service
 class NpmJsonReader {
 
     fun parseJson(json: String): NpmJsonData {
-        val jsonParser: ObjectMapper = ObjectMapper()
+        val jsonParser = ObjectMapper()
         return jsonParser.readValue(json, NpmJsonData::class.java)
     }
 
 }
 
 class NpmJsonData(
-    val name: String,
-    val version: String,
-    val dependencies: Map<String, NpmJsonDependency>
+    var name: String ="",
+    var version: String = "",
+    var dependencies: Map<String, NpmJsonDependency> = mapOf()
 ){}
 
 class NpmJsonDependency(
-    val version: String,
-    val resolved: String,
-    val dependencies: Map<String, NpmJsonDependency>
+    var version: String="",
+    var resolved: String="",
+    var dependencies: Map<String, NpmJsonDependency> = mapOf()
 ){}
